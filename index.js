@@ -1,5 +1,6 @@
 const Jimp = require("jimp");
 const { Client, MessageEmbed, MessageAttachment } = require("discord.js");
+const config = require("./config.js")
 
 const client = new Client();
 
@@ -88,7 +89,7 @@ client.on("message", async msg => {
 	}
 });
 
-client.login("Nzc5MTEyMjgwNDAyNDI3OTE0.X7by2g.Btu1PWMCXfadOVErDwtkRjSMPDU");
+client.login(config.discordToken);
 
 // TODO: Gamer License Test
 // TODO: Revoke gamer license when user leaves
