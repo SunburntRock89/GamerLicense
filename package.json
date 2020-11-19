@@ -1,0 +1,30 @@
+{
+  "name": "gamerlicense",
+  "version": "1.0.0",
+  "description": "Generate gamer licenses",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "jimp": "^0.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunburntRock89/GamerLicense.git"
+  },
+  "keywords": [
+    "gamer",
+    "license",
+    "gamer",
+    "license"
+  ],
+  "author": "SunburntRock89",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/SunburntRock89/GamerLicense/issues"
+  },
+  "homepage": "https://github.com/SunburntRock89/GamerLicense#readme"
+}
