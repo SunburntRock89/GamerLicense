@@ -21,7 +21,7 @@ const randomDate = () => {
 client.on("message", async msg => {
 	if (msg.mentions?.users?.first()?.id !== client.user.id) return;
 	try {		
-		const licenseTemplate = await Jimp.read("./GamerLicense.PNG")
+		const licenseTemplate = await Jimp.read("./GamerLicense.png")
 		const userPFP = await Jimp.read(msg.author.avatarURL({ format: "png" }));
 	
 		userPFP.resize(165, 165)
