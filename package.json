@@ -4,10 +4,10 @@
   "description": "Generate gamer licenses",
   "main": "build/index.js",
   "dependencies": {
-    "@types/skia-canvas": "^0.9.1",
     "chainfetch": "^1.2.2",
     "discord.js": "^13.0.0-dev.fe5d56c.1625443439",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "skia-canvas": "^0.9.22"
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.0",
