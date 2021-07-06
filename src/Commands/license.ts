@@ -1,5 +1,5 @@
 import { CommandInteraction, MessageEmbed } from "discord.js";
-import { createCanvas, loadImage } from "canvas";
+import { Canvas, loadImage } from "skia-canvas";
 import { get } from "chainfetch";
 import { readFile, writeFile } from "fs/promises";
 
@@ -17,7 +17,7 @@ const formatDate = (date: Date): string => {
 	let readableDay = day.toString();
 	if (day < 10) readableDay = `0${day}`;
 
-	let readableMonth = day.toString();
+	let readableMonth = month.toString();
 	if (month < 10) readableMonth = `0${month}`;
 
 	return `${readableDay}/${readableMonth}/${year}`;
@@ -30,7 +30,7 @@ interface LicenseDetails {
 
 export default async(command: CommandInteraction): Promise<void> => {
 	try {
-		const license = createCanvas(960, 549);
+		const license = new Canvas(960, 549);
 		const licenseTemplate = await loadImage("./GamerLicense.png");
 		const ctx = license.getContext("2d");
 		ctx.drawImage(licenseTemplate, 0, 0);

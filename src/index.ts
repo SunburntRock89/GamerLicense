@@ -1,5 +1,5 @@
 import { Client, CommandInteraction, Interaction } from "discord.js";
-import { registerFont } from "canvas";
+import { FontLibrary } from "skia-canvas";
 
 import config from "./config";
 
@@ -11,7 +11,7 @@ const client = new Client({
 });
 
 client.on("ready", async() => {
-	registerFont("./comic.ttf", { family: "Comic Sans MS" });
+	FontLibrary.use(["./comic.ttf"]);
 	// for (const g of client.guilds.cache.keys()) {
 	// 	client.application.commands.set([{
 	// 		name: "license",
@@ -33,10 +33,10 @@ client.on("interactionCreate", async(interaction: Interaction) => {
 			const command = interaction as CommandInteraction;
 			try {
 				// eslint-disable-next-line @typescript-eslint/no-var-requires
-				const cmdFile = require(`./Commands/${command.command.name}`);
+				const cmdFile = require(`./Commands/${command.commandName}`);
 				if (cmdFile) cmdFile.default(command);
 			} catch {
-				console.error(`Unhandled command found! ${command.command.name}`);
+				console.error(`Unhandled command found! ${command.commandName}`);
 			}
 			break;
 		}
