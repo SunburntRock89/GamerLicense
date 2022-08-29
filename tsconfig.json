@@ -5,7 +5,8 @@
 		"target": "ES2019",
 		"module": "commonjs",
 		"moduleResolution": "Node",
-		"esModuleInterop": true
+		"esModuleInterop": true,
+		"strict": true
 	},
 	"include": [
 		"src/**/*"
